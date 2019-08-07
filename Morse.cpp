@@ -7,6 +7,53 @@ Morse::Morse(int pin)
   _pin = pin;
 }
 
+void Morse::letter(int key)
+{
+  switch (key) 
+
+ {
+    case 'a': this->a(); break;
+    case 'b': this->b(); break;
+    case 'c': this->c(); break;
+    case 'd': this->d(); break;
+    case 'e': this->e(); break;
+    case 'f': this->f(); break;
+    case 'g': this->g(); break;
+    case 'h': this->h(); break;
+    case 'i': this->i(); break;
+    case 'j': this->j(); break;
+    case 'k': this->k(); break;
+    case 'l': this->l(); break;
+    case 'm': this->m(); break;
+    case 'n': this->n(); break;
+    case 'u': this->u(); break;
+    case 'o': this->o(); break;
+    case 'p': this->p(); break;
+    case 'r': this->r(); break;
+    case 's': this->s(); break;
+    case 't': this->t(); break;
+    case 'w': this->w(); break;
+    case 'x': this->x(); break;
+    case 'y': this->y(); break;
+    case 'q': this->q(); break;
+    case 'z': this->z(); break;
+  
+    case '1': this->unul(); break;
+    case '2': this->doi(); break;
+    case '3': this->trei(); break;
+    case '4': this->patru(); break;
+    case '5': this->cinci(); break;
+    case '6': this->sase(); break;
+    case '7': this->sapte(); break;
+    case '8': this->opt(); break;
+    case '9': this->noua(); break;
+    case '0': this->zero(); break;
+  
+ }
+
+}
+
+
 void Morse::dot()
 {
   digitalWrite(_pin, HIGH);

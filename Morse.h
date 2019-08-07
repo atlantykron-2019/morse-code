@@ -7,6 +7,7 @@ class Morse
 {
   public:
     Morse(int pin);
+    void letter(int key);
     void dot();
     void dash();
     void a();
