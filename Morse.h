@@ -7,7 +7,6 @@ class Morse
 {
   public:
     Morse(int pin);
-//    void serialMonitor(int serialWord);
     void letter(int key);
     void dot();
     void dash();
@@ -47,7 +46,7 @@ class Morse
     void opt();
     void noua();
     void zero();
-   private:
+  private:
     int _pin;
 };
 

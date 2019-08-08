@@ -6,15 +6,6 @@ Morse::Morse(int pin)
   pinMode(pin, OUTPUT);
   _pin = pin;
 }
-//
-//void Morse::serialMonitor(int serialWord)
-//{
-//
-//    serialWord = Serial.read();
-//    Serial.println(char(serialWord));
-//    Serial.println();    // End the line
-//
-//}
 
 void Morse::letter(int key)
 {

@@ -1,7 +1,6 @@
 #include "Morse.h"
 
 Morse morse(13);
-int key = 0;
 int serialWord = 0;
 
 void setup()
@@ -17,7 +16,7 @@ void loop()
   {
     serialWord = Serial.read();
     Serial.println(char(serialWord));
-    Serial.println();    // End the line
+    Serial.println();    
     morse.letter(serialWord);
     delay(300);
   }
