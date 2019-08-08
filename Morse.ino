@@ -1,21 +1,24 @@
 #include "Morse.h"
 
 Morse morse(13);
-int key=0;
+int key = 0;
+int serialWord = 0;
 
 void setup()
 {
   Serial.begin(9600);
+
 }
 
 void loop()
 {
-  int state = 0;
+
   if (Serial.available() > 0)
   {
-    key = Serial.read();
+    serialWord = Serial.read();
+    Serial.println(char(serialWord));
+    Serial.println();    // End the line
+    morse.letter(serialWord);
+    delay(300);
   }
-  Serial.println(key);
-  morse.letter(key);
-
 }

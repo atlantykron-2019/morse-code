@@ -6,12 +6,21 @@ Morse::Morse(int pin)
   pinMode(pin, OUTPUT);
   _pin = pin;
 }
+//
+//void Morse::serialMonitor(int serialWord)
+//{
+//
+//    serialWord = Serial.read();
+//    Serial.println(char(serialWord));
+//    Serial.println();    // End the line
+//
+//}
 
 void Morse::letter(int key)
 {
-  switch (key) 
+  switch (key)
 
- {
+  {
     case 'a': this->a(); break;
     case 'b': this->b(); break;
     case 'c': this->c(); break;
@@ -37,7 +46,7 @@ void Morse::letter(int key)
     case 'y': this->y(); break;
     case 'q': this->q(); break;
     case 'z': this->z(); break;
-  
+
     case '1': this->unul(); break;
     case '2': this->doi(); break;
     case '3': this->trei(); break;
@@ -48,8 +57,8 @@ void Morse::letter(int key)
     case '8': this->opt(); break;
     case '9': this->noua(); break;
     case '0': this->zero(); break;
-  
- }
+
+  }
 
 }
 
@@ -59,7 +68,7 @@ void Morse::dot()
   digitalWrite(_pin, HIGH);
   delay(250);
   digitalWrite(_pin, LOW);
-  delay(250);  
+  delay(250);
 }
 
 void Morse::dash()
@@ -171,7 +180,7 @@ void Morse::n()
 
 void Morse::o()
 {
-  
+
   this->dash();
   this->dash();
   this->dash();
@@ -212,79 +221,79 @@ void Morse::t()
   this->dash();
 }
 
-void Morse::u(){
+void Morse::u() {
   this->dot();
   this->dot();
   this->dash();
 }
 
-void Morse::v(){
-  this->dot();
-  this->dot();
-  this->dot();
-  this->dash();
-}
-
-void Morse::w(){
-  this->dot();
-  this->dash();
-  this->dash();
-}
-
-void Morse::x(){
-  this->dash();
-  this->dot();
-  this->dot();
-  this->dash();
-}
-
-void Morse::y(){
-  this->dash();
-  this->dot();
-  this->dash();
-  this->dash();
-}
-
-void Morse::z(){
-  this->dash();
-  this->dash();
-  this->dot();
-  this->dot();
-}
-
-void Morse::unul(){
-  this->dot();
-  this->dash();
-  this->dash();
-  this->dash();
-  this->dash();
-}
-
-void Morse::doi(){
-  this->dot();
-  this->dot();
-  this->dash();
-  this->dash();
-  this->dash();
-}
-
-void Morse::trei(){
-  this->dot();
-  this->dot();
-  this->dot();
-  this->dash();
-  this->dash();
-}
-
-void Morse::patru(){
-  this->dot();
+void Morse::v() {
   this->dot();
   this->dot();
   this->dot();
   this->dash();
 }
 
-void Morse::cinci(){
+void Morse::w() {
+  this->dot();
+  this->dash();
+  this->dash();
+}
+
+void Morse::x() {
+  this->dash();
+  this->dot();
+  this->dot();
+  this->dash();
+}
+
+void Morse::y() {
+  this->dash();
+  this->dot();
+  this->dash();
+  this->dash();
+}
+
+void Morse::z() {
+  this->dash();
+  this->dash();
+  this->dot();
+  this->dot();
+}
+
+void Morse::unul() {
+  this->dot();
+  this->dash();
+  this->dash();
+  this->dash();
+  this->dash();
+}
+
+void Morse::doi() {
+  this->dot();
+  this->dot();
+  this->dash();
+  this->dash();
+  this->dash();
+}
+
+void Morse::trei() {
+  this->dot();
+  this->dot();
+  this->dot();
+  this->dash();
+  this->dash();
+}
+
+void Morse::patru() {
+  this->dot();
+  this->dot();
+  this->dot();
+  this->dot();
+  this->dash();
+}
+
+void Morse::cinci() {
   this->dot();
   this->dot();
   this->dot();
@@ -292,7 +301,7 @@ void Morse::cinci(){
   this->dot();
 }
 
-void Morse::sase(){
+void Morse::sase() {
   this->dash();
   this->dot();
   this->dot();
@@ -300,7 +309,7 @@ void Morse::sase(){
   this->dot();
 }
 
-void Morse::sapte(){
+void Morse::sapte() {
   this->dash();
   this->dash();
   this->dot();
@@ -308,7 +317,7 @@ void Morse::sapte(){
   this->dot();
 }
 
-void Morse::opt(){
+void Morse::opt() {
   this->dash();
   this->dash();
   this->dash();
@@ -316,7 +325,7 @@ void Morse::opt(){
   this->dot();
 }
 
-void Morse::noua(){
+void Morse::noua() {
   this->dash();
   this->dash();
   this->dash();
@@ -324,7 +333,7 @@ void Morse::noua(){
   this->dot();
 }
 
-void Morse::zero(){
+void Morse::zero() {
   this->dash();
   this->dash();
   this->dash();
