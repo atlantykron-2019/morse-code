@@ -11,13 +11,13 @@ void setup()
 
 void loop()
 {
-
-  if (Serial.available() > 0)
-  {
-    serialWord = Serial.read();
-    Serial.println(char(serialWord));
-    Serial.println();    
-    morse.letter(serialWord);
-    delay(300);
+  if (! (Serial.available() > 0) ) {
+    return;
   }
+  
+  serialWord = Serial.read();
+  Serial.println(char(serialWord));
+  Serial.println();    
+  morse.letter(serialWord);
+  delay(300);
 }
