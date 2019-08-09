@@ -16,9 +16,10 @@ void Morse::phrase(String string)
 
 void Morse::letter(int key)
 {
-  switch (key)
-
-  {
+  switch (key) {
+    /**
+     * letters
+     */
     case 'a': this->a(); break;
     case 'b': this->b(); break;
     case 'c': this->c(); break;
@@ -45,6 +46,9 @@ void Morse::letter(int key)
     case 'q': this->q(); break;
     case 'z': this->z(); break;
 
+    /**
+     * digits
+     */
     case '1': this->unul(); break;
     case '2': this->doi(); break;
     case '3': this->trei(); break;
@@ -55,9 +59,7 @@ void Morse::letter(int key)
     case '8': this->opt(); break;
     case '9': this->noua(); break;
     case '0': this->zero(); break;
-
   }
-
 }
 
 
