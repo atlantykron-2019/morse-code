@@ -7,6 +7,13 @@ Morse::Morse(int pin)
   _pin = pin;
 }
 
+void Morse::phrase(String string)
+{
+  for (int i = 0; i < string.length(); i ++) {
+    this->letter(string.charAt(i));
+  }
+}
+
 void Morse::letter(int key)
 {
   switch (key)
